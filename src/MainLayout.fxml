@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="1200.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationController">
+   <bottom>
+      <BorderPane prefHeight="90.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <right>
+            <TextArea fx:id="authors" editable="false" prefHeight="200.0" prefWidth="200.0" text="SAMPLE TEXT" wrapText="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets top="10.0" />
+               </BorderPane.margin></TextArea>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="40.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#koggeStone" text="Sumator Kogge–Stone" />
+            <Button mnemonicParsing="false" onAction="#ladnerFischer" text="Sumator Ladner-Fischer" />
+            <Button fx:id="exit" cancelButton="true" mnemonicParsing="false" onAction="#exit" text="Wyjście" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+   </center>
+   <top>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="title" text="Program symulujący sumatory prefiksowe" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="60.0" />
+         </BorderPane.margin>
+      </FlowPane>
+   </top>
+</BorderPane>
